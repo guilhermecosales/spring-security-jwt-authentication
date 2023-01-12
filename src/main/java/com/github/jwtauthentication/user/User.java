@@ -11,7 +11,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "_user")
-public class User {
+public class User{
 
     @Id
     @GeneratedValue
@@ -20,5 +20,7 @@ public class User {
     private String lastName;
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
 }
